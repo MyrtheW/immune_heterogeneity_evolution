@@ -1,0 +1,9 @@
+d: # cross-immunity breadth 
+  - 1
+  # - 5
+  # - 10
+  # - 20
+  # - 100
+ageing: 
+  - True
+  # - False

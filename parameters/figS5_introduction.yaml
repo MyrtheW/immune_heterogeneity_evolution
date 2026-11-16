@@ -1,0 +1,21 @@
+parameters:
+  N: 25 #  maximum number of variants
+  M: 10 # number of age groups
+  α: 2 # Infection rate (changed to that of Yan et al.)
+  γ: 1.0e-3 # Ageing rate . Note that in contrast to the overleaf, gamma is the ageing rate. In the code, the population turnoverrate is gamma / M. . If δ is approximately 5 days and each age group is 10 years, then  γ = 5/(100/M*365) 
+  δ: 1 # Recovery rate
+  c: 0.1 # Cij/Cii
+  σ: 0 # Cross-immunity noise (see overleaf)
+  d: 10 # Cross-immunity breadth
+  I0: 1.0e-6 # Initial number of infected individuals
+  Ie: 1.0e-7 # A variant is set to extinct if the sum of of proportions of infected individuals over all age groups is below this threshold
+  ageing: True # If ageing is True, the ageing rate γ reflects the flux between age groups. If ageing is False, γ reflects the population turnover, which is equal for all age groups . 
+  strain_introduction: "prevalence" # "prevalence" or  "uniform_excluding_zeros" ; The strategy for introducing new strains.
+  
+simulation:
+  t_iteration: 10 # The number of time steps, on average, to run in between strains are added. The actual time interval is drawn from an exponential distribution with mean t_iteration. 
+  t_max: 3.0e+4 # Note that you may want to start with a short t_max, e.g. 1.0e+3 for testing the dynamics, because for long run times, e.g. 1.0e+5 simulations will take long, as 100,000 will take a long time to run, and it will be difficult to plot the tree for over 100 variants. The the total of time steps to run (100,000 +- 1,000 years). Alternatively, one can define the number of 'iterations'.
+  t_burn_in: 2.0e+4 # The burn-in time, that will be disregarded for calculating summary statistics.  By default I recommend 2.0e+4 for a simulation period of 1.0e+5. If t_burn_in > t_max, the burn-in time will be set to half of t_max.
+  seed: 1 # The random seed 
+  t_step_max: 1 # The maximal time step for the numerical integration simulation  
+  output_folder: "/Users/mwille26/Documents/mixing_evolution_results/figS5_introduction" # The folder where the results will be saved. If the folder does not exist, it will be created.

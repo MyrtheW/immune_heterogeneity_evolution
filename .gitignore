@@ -1,0 +1,15 @@
+__pycache__/** 
+__pycache__/
+model/__pycache__/
+model/__pycache__/**    
+figures/fig_2025-03-20_1e-05_all.png
+figures/** 
+results/** 
+simulations/old/**
+simulations/old/*
+simulations/old/figures/*
+/simulations/old/*
+OLD/**
+old/*
+.vscode/
+.DS_Store
