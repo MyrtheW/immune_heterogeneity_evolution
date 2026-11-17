@@ -1,6 +1,6 @@
-# mixing_evolution
+# Impact of immune heterogeneity on antigenic evolution
 
-This repository contains code for running and analyzing mixing evolution simulations.
+This repository contains code for running and analyzing simulations.
 
 ## Overview
 
